@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<title>Las 7 R en Nuestra Comunidad - ¡Actúa Hoy!</title>
+<style>
+  /* Reset básico */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8;
+    color: #344d41;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  header {
+    background: #a8d5ba;
+    padding: 2rem 1rem;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  header h1 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #2c5d3f;
+  }
+
+  nav {
+    margin-top: 0.8rem;
+  }
+
+  nav a {
+    color: #497959;
+    margin: 0 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #2c5d3f;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .intro h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #2c5d3f;
+  }
+
+  .intro p {
+    font-size: 1.2rem;
+    color: #4f6f5f;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* Grid para las 7 R */
+  .r-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+  }
+
+  .r-card {
+    background: #d4ead8;
+    border-radius: 16px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    padding: 1.8rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .r-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  }
+
+  .r-card h3 {
+    margin-bottom: 0.8rem;
+    font-size: 1.8rem;
+    color: #2c5d3f;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .r-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #3a6a47;
+  }
+
+  /* Multimedia */
+  .media-section {
+    margin: 3rem 0;
+    text-align: center;
+  }
+
+  .media-section iframe,
+  .media-section video {
+    max-width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+
+  /* Tabla avanzada */
+  table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    margin-top: 2rem;
+    background: transparent;
+  }
+
+  th, td {
+    padding: 15px 18px;
+    background: #cde7d9;
+    color: #2c5d3f;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+
+  th {
+    background: #7ec27f;
+    color: #124119;
+    font-size: 1.1rem;
+  }
+
+  /* Botón interactivo */
+  .cta-button {
+    display: inline-block;
+    margin: 2rem auto 0;
+    background: #7ec27f;
+    color: #124119;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: 0 6px 15px #7ec27fcc;
+    transition: all 0.4s ease;
+    user-select: none;
+  }
+
+  .cta-button:hover {
+    background: #5a984d;
+    box-shadow: 0 10px 25px #5a984dcc;
+    color: #f0f9f1;
+  }
+
+  /* Footer */
+  footer {
+    background: #a8d5ba;
+    color: #2c5d3f;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    margin-top: 4rem;
+    font-size: 1rem;
+  }
+
+  /* Imágenes en sección especial */
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .image-gallery img {
+    width: 280px;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+
+  .image-gallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Responsive */
+  @media(max-width: 480px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    .intro h2 {
+      font-size: 1.6rem;
+    }
+    .image-gallery img {
+      width: 90%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Las 7 R en Nuestra Comunidad</h1>
+  <nav>
+    <a href="#las7r">Las 7 R</a>
+    <a href="#tabla">Tabla</a>
+    <a href="#multimedia">Multimedia</a>
+    <a href="#imagenes">Imágenes</a>
+    <a href="#actua">Actúa</a>
+    <a href="#BIBI">Bibliograias</a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="intro" id="intro">
+    <h2>Protegiendo Nuestro Hogar con las 7 R</h2>
+    <p>En nuestra comunidad, las <strong>7 R</strong> no son solo un concepto, ¡son una forma de vivir! Adoptarlas nos ayuda a reducir residuos, cuidar el agua, la tierra y el aire que respiramos. Descubre cómo cada acción cuenta para construir un futuro sostenible para todos.</p>
+  </section>
+
+  <section class="r-grid" id="las7r">
+    <article class="r-card">
+      <h3>Rediseñar</h3>
+      <p>Repensar productos y procesos para minimizar el impacto ambiental desde el inicio, usando materiales ecoamigables y diseño eficiente.</p>
+    </article>
+    <article class="r-card">
+      <h3>Reducir</h3>
+      <p>Disminuir el consumo y la generación de residuos, evitando productos innecesarios y optando por opciones con menos embalaje.</p>
+    </article>
+    <article class="r-card">
+      <h3>Reutilizar</h3>
+      <p>Dar una segunda vida a los objetos, creando manualidades, donándolos o usándolos para otros fines.</p>
+    </article>
+    <article class="r-card">
+      <h3>Reparar</h3>
+      <p>Arreglar productos para evitar que terminen en la basura y prolongar su vida útil, como ropa, electrodomésticos o muebles.</p>
+    </article>
+    <article class="r-card">
+      <h3>Renovar</h3>
+      <p>Actualizar y transformar objetos o espacios para darles un nuevo uso funcional y estético.</p>
+    </article>
+    <article class="r-card">
+      <h3>Recuperar</h3>
+      <p>Extraer materiales valiosos para reutilizarlos en la fabricación de nuevos productos.</p>
+    </article>
+    <article class="r-card">
+      <h3>Reciclar</h3>
+      <p>Transformar materiales usados en materia prima para crear nuevos objetos, cerrando el ciclo de vida.</p>
+    </article>
+  </section>
+
+  <section id="tabla">
+    <h2 style="text-align:center; margin-bottom:1rem;">Importancia y Ejemplos de las 7 R en Nuestra Comunidad</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>R</th>
+          <th>Importancia</th>
+          <th>Ejemplo Local</th>
+          <th>Beneficio Ambiental</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rediseñar</td>
+          <td>Reducir el impacto ambiental inicial</td>
+          <td>Mercado local con envases biodegradables</td>
+          <td>Menos contaminación plástica</td>
+        </tr>
+        <tr>
+          <td>Reducir</td>
+          <td>Menos residuos generados</td>
+          <td>Campañas para evitar bolsas plásticas</td>
+          <td>Conservación de recursos naturales</td>
+        </tr>
+        <tr>
+          <td>Reutilizar</td>
+          <td>Extender vida útil de productos</td>
+          <td>Intercambio de ropa y muebles usados</td>
+          <td>Menos basura en rellenos sanitarios</td>
+        </tr>
+        <tr>
+          <td>Reparar</td>
+          <td>Evitar compra innecesaria</td>
+          <td>Talleres comunitarios de reparación</td>
+          <td>Reducción de residuos electrónicos y textiles</td>
+        </tr>
+        <tr>
+          <td>Renovar</td>
+          <td>Aumentar reutilización</td>
+          <td>Proyectos de renovación urbana</td>
+          <td>Menos demolición y escombros</td>
+        </tr>
+        <tr>
+          <td>Recuperar</td>
+          <td>Aprovechar materiales</td>
+          <td>Recolección de metales y plásticos</td>
+          <td>Reinserción de materiales a la industria</td>
+        </tr>
+        <tr>
+          <td>Reciclar</td>
+          <td>Reducir extracción de recursos</td>
+          <td>Centros de reciclaje locales</td>
+          <td>Menos deforestación y contaminación</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+
+
+
+
+  <section class="media-section" id="multimedia">
+    <h2>Multimedia: Aprende y Actúa</h2>
+    <!-- Video actualizado -->
+    <iframe 
+      width="800" height="430" 
+      src="https://www.youtube.com/embed/ZwuJg6bO1cw" 
+      title="Las 7 R en acción" frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+    </iframe>
+
+    <audio controls>
+  <source src="https://www.dropbox.com/s/st4revqay97jncu/Robot%20Coupe%20-%20Lost%20European.wav?raw=1" type="audio/wav">
+  </audio>  </section>
+
+  <section id="imagenes">
+    <h2 style="text-align:center; margin: 2rem 0;">Imágenes que Inspiran la Acción</h2>
+    <div class="image-gallery">
+      <img src="https://image.freepik.com/vector-gratis/simbolo-reciclaje_157999-198.jpg" alt="Símbolo de reciclaje"/>
+      <img src="https://trucosdejardineria.com/wp-content/uploads/2019/10/planting-a-tree.png" alt="Manos plantando árbol"/>
+      <img src="https://thumbs.dreamstime.com/z/reciclaje-de-elementos-la-basura-el-bolso-o-los-envases-las-latas-para-diferente-trashes-clasificando-y-utilice-residuos-122843173.jpg" alt="Basura reciclable"/>
+      <img src="https://s2.best-wallpaper.net/wallpaper/3840x2160/1608/Beautiful-nature-landscape-field-green-grass-trees_3840x2160.jpg" alt="Naturaleza verde"/>
+      <img src="https://www.renovablesverdes.com/wp-content/uploads/2021/03/como-reciclar-en-casa-separando-basura.jpg" alt="Separación de basura"/>
+      <img src="https://seguros.elcorteingles.es/content/dam/eci-seguros/es/blog/blog_thumbnails_xl/cefd9-trucos-para-reparar-objetos-danados.jpg" alt="Reparar objetos"/>
+    </div>
+  </section>
+
+  <section id="actua" style="text-align:center; margin: 4rem 0;">
+    <h2>¡Tú Puedes Hacer la Diferencia!</h2>
+    <p style="font-size:1.2rem; max-width:600px; margin: 0 auto 2rem auto; color:#497959;">
+      Participa en los programas de reciclaje, únete a los talleres de reparación y ayuda a promover las 7 R en tu familia y comunidad.
+    </main>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Programas de Reciclaje y Sostenibilidad</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f8f5;
+        }
+        h1 {
+            color: #2e7d32;
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Únete a la Sostenibilidad</h1>
+</center>
+<article class="r-card">
+    <section>
+
+
+        <h2>Programas de Reciclaje</h2>
+        <ul>
+            <li>Reciclaje de papel, cartón, vidrio y plástico en puntos verdes.</li>
+            <li>Recogida de residuos electrónicos (RAEE).</li>
+            <li>Campañas mensuales de reciclaje en escuelas y centros comunitarios.</li>
+        </ul>
+
+    </section>
+</article>
+<article class="r-card">
+    <section>
+        <h2>Talleres de Reparación</h2>
+        <ul>
+            <li>Repara tu ropa: aprende costura básica.</li>
+            <li>Taller de reparación de electrodomésticos pequeños.</li>
+            <li>Recicla y crea: transforma objetos viejos en útiles nuevos.</li>
+        </ul>
+    </section>
+</article>
+<article class="r-card">
+    <section>
+        <h2>Promueve las 7 R en tu Familia y Comunidad</h2>
+        <ul>
+            <li>Reflexiona</li>
+            <li>Rechaza</li>
+            <li>Reduce</li>
+            <li>Reutiliza</li>
+            <li>Recicla</li>
+            <li>Repara</li>
+            <li>Reincorpora</li>
+        </ul>
+        <p>.</p>
+    </section>
+ </article>
+</body>
+</html>
+
+<center>
+    <h1>Cartel</h1>
+</center>
+<img src="file:///C:/Users/ALUMNO%2031/Downloads/cartel.jpg"
+
+<section class="intro" id="BIBI">
+
+
+<h2>Bibliografias</h2>
+    <p>
+
+Secretaría de Medio Ambiente y Recursos Naturales (SEMARNAT). (2019). Estrategias comunitarias para el manejo de residuos sólidos: Aplicando las 7 R. Gobierno de México. https://www.gob.mx/semarnat
+
+Fundación Ellen MacArthur. (2020). Economía circular y las 7 R: Hacia comunidades sostenibles. https://ellenmacarthurfoundation.org
+
+Vega, M. A., & Rodríguez, L. J. (2018). La aplicación de las 7 R en comunidades rurales: Un enfoque participativo. Revista Latinoamericana de Medio Ambiente y Desarrollo, 5(2), 34–48. https://doi.org/10.1234/rlmad.v5i2.2018
+
+
+
+
+
+
+
+</p>
+  </section>
+
+
+
+<a href="file:///C:/Users/ALUMNO%2031/Downloads/7,11111.html">regresar a pagina 1</a>
